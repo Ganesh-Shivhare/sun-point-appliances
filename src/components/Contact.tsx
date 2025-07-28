@@ -4,29 +4,39 @@ import { Phone, MessageCircle, Mail, MapPin, Facebook, Instagram, Clock } from "
 
 const Contact = () => {
   return (
-    <section className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Get in Touch</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground">
-            Visit us today or contact us for expert advice and great deals!
+    <section className="py-24 px-4 relative overflow-hidden">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0" style={{ background: 'var(--gradient-mesh)' }}></div>
+      <div className="absolute top-20 left-20 w-64 h-64 rounded-full opacity-20 animate-float" style={{ background: 'var(--gradient-glow)' }}></div>
+      <div className="absolute bottom-20 right-20 w-80 h-80 rounded-full opacity-15 animate-bounce-slow" style={{ background: 'var(--gradient-glow)' }}></div>
+      
+      <div className="container mx-auto max-w-7xl relative">
+        <div className="text-center mb-16">
+          <div className="inline-block mb-6">
+            <h2 className="text-5xl lg:text-6xl font-black gradient-text mb-4">Get in Touch</h2>
+            <div className="h-2 w-40 mx-auto rounded-full animate-gradient" style={{ background: 'var(--gradient-brand)' }}></div>
+          </div>
+          <p className="text-2xl text-muted-foreground font-medium">
+            Visit us today or contact us for <span className="gradient-text font-bold">expert advice and great deals!</span>
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Information */}
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  Store Location
+          <div className="space-y-8">
+            <Card className="floating-card border-2 border-brand-orange/30 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-5" style={{ background: 'var(--gradient-brand)' }}></div>
+              <CardHeader className="relative z-10">
+                <CardTitle className="flex items-center gap-4 text-2xl">
+                  <div className="p-3 rounded-2xl" style={{ background: 'var(--gradient-brand)' }}>
+                    <MapPin className="h-8 w-8 text-white" />
+                  </div>
+                  <span className="gradient-text">Store Location</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Sunpoint Appliances (AKBARALLYS)<br />
+              <CardContent className="relative z-10">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  <span className="font-bold gradient-text">Sunpoint Appliances (AKBARALLYS)</span><br />
                   15 Sakar VII Nehru Bridge Corner,<br />
                   Ashram Rd, opposite Patang Hotel,<br />
                   Ahmedabad, Gujarat 380009
@@ -34,95 +44,123 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Phone className="h-5 w-5 text-primary" />
-                    <span className="font-semibold">Call Us</span>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <Card className="floating-card border-2 border-brand-orange/30 group hover:border-brand-orange/50 transition-all duration-300">
+                <CardContent className="pt-8">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="p-3 rounded-2xl group-hover:scale-110 transition-transform duration-300" style={{ background: 'var(--gradient-brand)' }}>
+                      <Phone className="h-6 w-6 text-white" />
+                    </div>
+                    <span className="font-bold text-xl gradient-text">Call Us</span>
                   </div>
-                  <p className="text-muted-foreground">+91 79 2658 0157</p>
+                  <p className="text-lg text-muted-foreground font-semibold">+91 79 2658 0157</p>
                 </CardContent>
               </Card>
 
-              <Card>
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Mail className="h-5 w-5 text-primary" />
-                    <span className="font-semibold">Email</span>
+              <Card className="floating-card border-2 border-brand-orange/30 group hover:border-brand-orange/50 transition-all duration-300">
+                <CardContent className="pt-8">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="p-3 rounded-2xl group-hover:scale-110 transition-transform duration-300" style={{ background: 'var(--gradient-brand)' }}>
+                      <Mail className="h-6 w-6 text-white" />
+                    </div>
+                    <span className="font-bold text-xl gradient-text">Email</span>
                   </div>
-                  <p className="text-muted-foreground">info@sunpointappliances.in</p>
+                  <p className="text-lg text-muted-foreground">info@sunpointappliances.in</p>
                 </CardContent>
               </Card>
             </div>
 
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <Clock className="h-5 w-5 text-primary" />
-                  <span className="font-semibold">Store Hours</span>
+            <Card className="floating-card border-2 border-brand-orange/30">
+              <CardContent className="pt-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="p-3 rounded-2xl" style={{ background: 'var(--gradient-brand)' }}>
+                    <Clock className="h-6 w-6 text-white" />
+                  </div>
+                  <span className="font-bold text-xl gradient-text">Store Hours</span>
                 </div>
-                <div className="space-y-1 text-muted-foreground">
-                  <p>Monday - Saturday: 10:00 AM - 8:00 PM</p>
-                  <p>Sunday: 11:00 AM - 7:00 PM</p>
+                <div className="space-y-2 text-lg text-muted-foreground">
+                  <p><span className="font-semibold">Monday - Saturday:</span> 10:00 AM - 8:00 PM</p>
+                  <p><span className="font-semibold">Sunday:</span> 11:00 AM - 7:00 PM</p>
                 </div>
               </CardContent>
             </Card>
           </div>
 
           {/* Quick Actions */}
-          <div className="space-y-6">
-            <Card className="bg-gradient-to-br from-primary/5 to-secondary/5">
-              <CardHeader>
-                <CardTitle>Quick Contact</CardTitle>
+          <div className="space-y-8">
+            <Card className="floating-card border-2 border-brand-orange/30 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10" style={{ background: 'var(--gradient-sunset)' }}></div>
+              <CardHeader className="relative z-10">
+                <CardTitle className="text-3xl gradient-text text-center">Quick Contact</CardTitle>
+                <div className="w-20 h-1 mx-auto rounded-full" style={{ background: 'var(--gradient-brand)' }}></div>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <Button className="w-full justify-start" size="lg">
-                  <Phone className="mr-3 h-5 w-5" />
+              <CardContent className="space-y-6 relative z-10">
+                <Button className="w-full justify-start text-xl py-4 glow-effect transform hover:scale-105 transition-all duration-300" size="lg" style={{ background: 'var(--gradient-brand)' }}>
+                  <Phone className="mr-4 h-6 w-6" />
                   Call Now: +91 79 2658 0157
                 </Button>
-                <Button variant="outline" className="w-full justify-start" size="lg">
-                  <MessageCircle className="mr-3 h-5 w-5" />
+                <Button variant="outline" className="w-full justify-start text-xl py-4 border-2 border-brand-orange hover:bg-brand-orange hover:text-white transition-all duration-300 transform hover:scale-105" size="lg">
+                  <MessageCircle className="mr-4 h-6 w-6" />
                   WhatsApp Chat
                 </Button>
-                <Button variant="outline" className="w-full justify-start" size="lg">
-                  <Mail className="mr-3 h-5 w-5" />
+                <Button variant="outline" className="w-full justify-start text-xl py-4 border-2 border-brand-orange hover:bg-brand-orange hover:text-white transition-all duration-300 transform hover:scale-105" size="lg">
+                  <Mail className="mr-4 h-6 w-6" />
                   Send Email
                 </Button>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="floating-card border-2 border-brand-orange/30">
               <CardHeader>
-                <CardTitle>Follow Us</CardTitle>
+                <CardTitle className="text-2xl gradient-text text-center">Follow Us</CardTitle>
+                <div className="w-16 h-1 mx-auto rounded-full" style={{ background: 'var(--gradient-brand)' }}></div>
               </CardHeader>
               <CardContent>
-                <div className="flex gap-4">
-                  <Button variant="outline" size="icon">
-                    <Facebook className="h-5 w-5" />
+                <div className="flex gap-6 justify-center mb-6">
+                  <Button variant="outline" size="lg" className="border-2 border-brand-orange/50 hover:bg-brand-orange hover:text-white transition-all duration-300 transform hover:scale-110 px-6">
+                    <Facebook className="h-6 w-6 mr-2" />
+                    Facebook
                   </Button>
-                  <Button variant="outline" size="icon">
-                    <Instagram className="h-5 w-5" />
+                  <Button variant="outline" size="lg" className="border-2 border-brand-orange/50 hover:bg-brand-orange hover:text-white transition-all duration-300 transform hover:scale-110 px-6">
+                    <Instagram className="h-6 w-6 mr-2" />
+                    Instagram
                   </Button>
-                  <Button variant="outline" size="icon">
-                    <MapPin className="h-5 w-5" />
+                  <Button variant="outline" size="lg" className="border-2 border-brand-orange/50 hover:bg-brand-orange hover:text-white transition-all duration-300 transform hover:scale-110 px-6">
+                    <MapPin className="h-6 w-6 mr-2" />
+                    Maps
                   </Button>
                 </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Stay updated with our latest offers and new arrivals!
+                <p className="text-lg text-muted-foreground text-center">
+                  Stay updated with our <span className="gradient-text font-bold">latest offers</span> and new arrivals!
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="pt-6">
-                <h3 className="font-semibold mb-2">Why Choose Sunpoint Appliances?</h3>
-                <ul className="space-y-1 text-sm opacity-90">
-                  <li>✓ Genuine Products with Warranty</li>
-                  <li>✓ Competitive Prices</li>
-                  <li>✓ Expert In-Store Guidance</li>
-                  <li>✓ Doorstep Delivery & Installation</li>
-                  <li>✓ Excellent After-Sales Support</li>
+            <Card className="floating-card relative overflow-hidden" style={{ background: 'var(--gradient-brand)' }}>
+              <div className="absolute inset-0 opacity-20" style={{ background: 'var(--gradient-glow)' }}></div>
+              <CardContent className="pt-8 relative z-10">
+                <h3 className="font-bold text-2xl mb-6 text-white text-center">Why Choose Sunpoint Appliances?</h3>
+                <ul className="space-y-3 text-lg text-white/90">
+                  <li className="flex items-center gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Genuine Products with Warranty</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Competitive Prices</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Expert In-Store Guidance</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Doorstep Delivery & Installation</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Excellent After-Sales Support</span>
+                  </li>
                 </ul>
               </CardContent>
             </Card>
