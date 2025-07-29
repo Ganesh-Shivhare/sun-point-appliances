@@ -21,53 +21,34 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 px-4 relative">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-10" style={{ 
-        backgroundImage: 'radial-gradient(circle at 20% 80%, hsl(var(--brand-orange) / 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--brand-red) / 0.3) 0%, transparent 50%)'
-      }}></div>
-      
-      <div className="container mx-auto max-w-7xl relative">
-        <div className="text-center mb-16">
-          <div className="inline-block mb-6">
-            <h2 className="text-5xl lg:text-6xl font-black gradient-text mb-4">What Our Customers Say</h2>
-            <div className="h-2 w-48 mx-auto rounded-full animate-gradient" style={{ background: 'var(--gradient-brand)' }}></div>
-          </div>
+    <section className="py-20 px-4 bg-muted/30">
+      <div className="container mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">What Our Customers Say</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="floating-card group border-2 hover:border-brand-orange/40 transition-all duration-500 transform hover:scale-105 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-20 h-20 opacity-10" style={{ background: 'var(--gradient-brand)' }}></div>
-              <CardContent className="pt-8 pb-8 relative z-10">
-                <div className="mb-6">
-                  <Quote className="h-12 w-12 mb-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300" style={{ color: 'hsl(var(--brand-orange))' }} />
-                </div>
-                <p className="text-lg text-muted-foreground mb-6 italic leading-relaxed font-medium">
+            <Card key={index} className="relative hover:shadow-lg transition-shadow">
+              <CardContent className="pt-6">
+                <Quote className="h-8 w-8 text-primary/20 mb-4" />
+                <p className="text-muted-foreground mb-4 italic">
                   "{testimonial.text}"
                 </p>
-                <div className="flex items-center justify-between pt-4 border-t border-brand-orange/20">
-                  <div className="font-bold text-xl gradient-text">
+                <div className="flex items-center justify-between">
+                  <div className="font-semibold text-foreground">
                     – {testimonial.name}
                   </div>
                   <div className="flex gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-brand-orange text-brand-orange animate-pulse-glow" style={{ animationDelay: `${i * 0.1}s` }} />
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center mt-16">
-          <div className="inline-block p-8 rounded-2xl relative overflow-hidden" style={{ background: 'var(--gradient-mesh)' }}>
-            <div className="relative z-10">
-              <p className="text-2xl font-bold gradient-text mb-2">Join Thousands of Happy Customers!</p>
-              <p className="text-lg text-muted-foreground">Experience the Sunpoint difference today</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
