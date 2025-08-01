@@ -15,7 +15,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: "About Us", id: "about" },
-    { label: "Our Product Range", id: "products" },
+    { label: "Our Product", id: "products" },
     { label: "Brands", id: "brands" },
     { label: "Testimonials", id: "testimonials" },
     { label: "Contact", id: "contact" },
@@ -28,7 +28,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <img 
-              src="/lovable-uploads/6b9133c6-3ae4-47e4-aa11-996f1c6b2841.png" 
+              src="/app_logo.png"
               alt="Sunpoint Appliances" 
               className="h-10"
             />

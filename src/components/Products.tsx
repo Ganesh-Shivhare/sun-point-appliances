@@ -45,7 +45,7 @@ const Products = () => {
     <section id="products" className="py-24 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gradient">Our Product Range</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gradient">Our Product</h2>
           <div className="w-32 h-1.5 gradient-brand mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Explore our wide selection of appliances designed to simplify your life

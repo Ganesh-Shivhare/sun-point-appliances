@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="w-full text-center">
             <div className="mb-8 fade-in">
               <img 
-                src="/lovable-uploads/6b9133c6-3ae4-47e4-aa11-996f1c6b2841.png" 
+                src="/app_logo.png"
                 alt="Sunpoint Appliances Logo" 
                 className="h-40 mx-auto mb-6 drop-shadow-lg hover:scale-110 transition-transform duration-300"
               />
