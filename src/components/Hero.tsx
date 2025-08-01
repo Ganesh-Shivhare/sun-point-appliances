@@ -5,14 +5,14 @@ const Hero = () => {
   return (
     <section className="relative bg-gradient-to-br from-background to-muted py-20 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col items-center text-center gap-8">
           {/* Logo and Main Content */}
-          <div className="flex-1 text-center lg:text-left">
+          <div className="w-full text-center">
             <div className="mb-8">
               <img 
                 src="/lovable-uploads/6b9133c6-3ae4-47e4-aa11-996f1c6b2841.png" 
                 alt="Sunpoint Appliances Logo" 
-                className="h-32 mx-auto lg:mx-0 mb-6"
+                className="h-32 mx-auto mb-6"
               />
             </div>
             
@@ -26,7 +26,7 @@ const Hero = () => {
               and home appliances at unbeatable prices. Serving Ahmedabad and beyond with leading Indian brands.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8 py-3">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Us Now
@@ -38,26 +38,6 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Contact Info Card */}
-          <div className="bg-card p-8 rounded-2xl shadow-lg border max-w-md w-full">
-            <h3 className="text-xl font-semibold mb-4 text-center">Visit Our Store</h3>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium">Sunpoint Appliances (AKBARALLYS)</p>
-                  <p className="text-sm text-muted-foreground">
-                    15 Sakar VII Nehru Bridge Corner, Ashram Rd, 
-                    opposite Patang Hotel, Ahmedabad, Gujarat 380009
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <span className="font-medium">+91 79 2658 0157</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
