@@ -44,10 +44,14 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-brand: linear-gradient(135deg, hsl(var(--brand-orange)), hsl(var(--brand-red)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-orange) / 0.1), hsl(var(--brand-red) / 0.05));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
     
     /* Shadows */
     --shadow-brand: 0 10px 30px -10px hsl(var(--brand-orange) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+    --shadow-elegant: 0 20px 40px -12px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 20px hsl(var(--primary) / 0.3);
 
     --radius: 0.5rem;
 
@@ -114,5 +118,39 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-brand {
+    background: var(--gradient-brand);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-elegant;
+  }
+  
+  .fade-in {
+    @apply animate-fade-in;
   }
 }

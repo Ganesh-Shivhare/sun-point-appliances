@@ -22,12 +22,12 @@ const Brands = () => {
   ];
 
   return (
-    <section id="brands" className="py-20 px-4 bg-muted/30">
+    <section id="brands" className="py-24 px-4 gradient-accent">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Top Brands We Deal In</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gradient">Top Brands We Deal In</h2>
+          <div className="w-32 h-1.5 gradient-brand mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl text-muted-foreground leading-relaxed">
             We stock 100% genuine products from India's most trusted brands
           </p>
         </div>

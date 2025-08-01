@@ -21,11 +21,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 bg-muted/30">
+    <section id="testimonials" className="py-24 px-4">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">What Our Customers Say</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
+        <div className="text-center mb-16 fade-in">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gradient">What Our Customers Say</h2>
+          <div className="w-32 h-1.5 gradient-brand mx-auto mb-8 rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
