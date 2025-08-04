@@ -29,10 +29,10 @@ const Navigation = () => {
           <div className="flex items-center gap-2">
             <img 
               src="/app_logo.png"
-              alt="Sunpoint Appliances" 
+              alt="Sun Point Appliances" 
               className="h-10"
             />
-            <span className="font-bold text-lg text-primary">Sunpoint Appliances</span>
+            <span className="font-bold text-lg text-primary">Sun Point Appliances</span>
           </div>
 
           {/* Desktop Navigation */}

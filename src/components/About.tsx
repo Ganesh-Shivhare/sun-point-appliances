@@ -36,7 +36,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="fade-in">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              At <span className="text-primary font-semibold">Sunpoint Appliances (AKBARALLYS)</span>, we bring you a curated range of the most 
+              At <span className="text-primary font-semibold">Sun Point Appliances (AKBARALLYS)</span>, we bring you a curated range of the most 
               reliable and affordable home appliances and kitchenware from top Indian brands. With years 
               of experience in retail and customer service, we've built a name trusted by thousands of 
               happy households.

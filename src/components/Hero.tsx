@@ -17,13 +17,13 @@ const Hero = () => {
             <div className="mb-8 fade-in">
               <img 
                 src="/app_logo.png"
-                alt="Sunpoint Appliances Logo" 
+                alt="Sun Point Appliances Logo" 
                 className="h-40 mx-auto mb-6 drop-shadow-lg hover:scale-110 transition-transform duration-300"
               />
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-foreground leading-tight fade-in">
-              Welcome to <span className="text-gradient">Sunpoint Appliances</span>
+              Welcome to <span className="text-gradient">Sun Point Appliances</span>
               <span className="block text-3xl lg:text-4xl text-secondary font-extrabold mt-2">(AKBARALLYS)</span>
             </h1>
             
