@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock, Star, MessageCircle, ExternalLink } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, Clock, Star, MessageCircle, ExternalLink, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -178,6 +179,17 @@ const Footer = () => {
               <p className="text-gray-400 text-xs mt-1">
                 GST No: 24ABCDE1234F1Z5 | PAN: ABCDE1234F
               </p>
+              <div className="mt-2">
+                <a 
+                  href="/privacy" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-primary transition-colors duration-200"
+                >
+                  <Shield className="h-3 w-3" />
+                  Privacy Policy & Terms
+                </a>
+              </div>
             </div>
           </div>
         </div>
