@@ -1,5 +1,3 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -9,8 +7,7 @@ import { Mail, Phone, MapPin, Shield, Users, FileText, Eye, Trash2 } from "lucid
 const Privacy = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <div className="pt-16">
+      <div>
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
           <div className="container mx-auto px-4">
@@ -19,7 +16,7 @@ const Privacy = () => {
                 Privacy Policy & Terms of Service
               </h1>
               <p className="text-xl text-gray-600">
-                At Sun Point Appliances (AKBARALLYS), we are committed to protecting your privacy and ensuring transparency in how we use your information.
+                At Sunpoint Appliances (AKBARALLYS), we are committed to protecting your privacy and ensuring transparency in how we use your information.
               </p>
             </div>
           </div>
@@ -135,7 +132,7 @@ const Privacy = () => {
                   <Checkbox id="marketing-consent" className="mt-1" />
                   <div>
                     <label htmlFor="marketing-consent" className="text-sm font-medium text-gray-900 cursor-pointer">
-                      Yes, I would like to receive marketing updates and offers from Sun Point Appliances via Email, SMS, and RCS.
+                      Yes, I would like to receive marketing updates and offers from Sunpoint Appliances via Email, SMS, and RCS.
                     </label>
                     <p className="text-sm text-gray-600 mt-1">
                       By checking this box, you agree to our Privacy Policy and Terms of Service. You can opt out at any time by following the instructions in our messages or by contacting us directly.
@@ -224,7 +221,7 @@ const Privacy = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <strong>Liability:</strong> Sun Point Appliances is not liable for indirect or incidental damages arising from the use of our services.
+                      <strong>Liability:</strong> Sunpoint Appliances is not liable for indirect or incidental damages arising from the use of our services.
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -247,7 +244,7 @@ const Privacy = () => {
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-green-600" />
                     <div>
-                      <strong>Sun Point Appliances (AKBARALLYS)</strong>
+                      <strong>Sunpoint Appliances (AKBARALLYS)</strong>
                       <p className="text-sm text-gray-600">
                         15 Sakar VII, Nehru Bridge Corner, Ashram Rd, opposite Patang Hotel, Ahmedabad, Gujarat 380009
                       </p>
@@ -268,19 +265,9 @@ const Privacy = () => {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Last Updated */}
-            <div className="text-center text-sm text-gray-500 py-8">
-              <p>Last updated: {new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}</p>
-            </div>
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
