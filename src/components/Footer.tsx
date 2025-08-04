@@ -21,7 +21,7 @@ const Footer = () => {
                 className="h-12"
               />
               <div>
-                <h3 className="text-xl font-bold text-primary">SunPoint Appliances</h3>
+                <h3 className="text-xl font-bold text-primary">Sun Point Appliances</h3>
                 <p className="text-sm text-gray-300">(AKBARALLYS)</p>
               </div>
             </div>
