@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <img 
                 src="/app_logo.png" 
-                alt="Sunpoint Appliances Logo" 
+                alt="Sun Point Appliances Logo" 
                 className="h-12"
               />
               <div>
@@ -54,7 +54,7 @@ const Footer = () => {
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Sunpoint Appliances (AKBARALLYS)<br />
+                    Sun Point Appliances (AKBARALLYS)<br />
                     15 Sakar VII Nehru Bridge Corner,<br />
                     Ashram Rd, opposite Patang Hotel,<br />
                     Ahmedabad, Gujarat 380009
@@ -131,7 +131,7 @@ const Footer = () => {
             <div className="mt-6 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
               <h4 className="text-sm font-semibold text-primary mb-2">Trusted by 1000+ Customers</h4>
               <p className="text-xs text-gray-300 leading-relaxed">
-                Join thousands of satisfied customers who trust Sunpoint Appliances for their home appliance needs.
+                Join thousands of satisfied customers who trust Sun Point Appliances for their home appliance needs.
               </p>
               <div className="flex items-center justify-end gap-2 text-yellow-400 mb-2 mt-4">
                 <Star className="h-3 w-3 fill-current" />
@@ -174,7 +174,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-right">
               <p className="text-gray-300 text-sm">
-                © 2024 SunPoint Appliances (AKBARALLYS). All rights reserved.
+                © 2024 Sun Point Appliances (AKBARALLYS). All rights reserved.
               </p>
               {/* <p className="text-gray-400 text-xs mt-1">
                 GST No: 24ABCDE1234F1Z5 | PAN: ABCDE1234F

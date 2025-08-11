@@ -16,7 +16,7 @@ const Privacy = () => {
                 Privacy Policy & Terms of Service
               </h1>
               <p className="text-xl text-gray-600">
-                At Sunpoint Appliances (AKBARALLYS), we are committed to protecting your privacy and ensuring transparency in how we use your information.
+                At Sun Point Appliances (AKBARALLYS), we are committed to protecting your privacy and ensuring transparency in how we use your information.
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ const Privacy = () => {
                   <Checkbox id="marketing-consent" className="mt-1" />
                   <div>
                     <label htmlFor="marketing-consent" className="text-sm font-medium text-gray-900 cursor-pointer">
-                      Yes, I would like to receive marketing updates and offers from Sunpoint Appliances via Email, SMS, and RCS.
+                      Yes, I would like to receive marketing updates and offers from Sun Point Appliances via Email, SMS, and RCS.
                     </label>
                     <p className="text-sm text-gray-600 mt-1">
                       By checking this box, you agree to our Privacy Policy and Terms of Service. You can opt out at any time by following the instructions in our messages or by contacting us directly.
@@ -221,7 +221,7 @@ const Privacy = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <strong>Liability:</strong> Sunpoint Appliances is not liable for indirect or incidental damages arising from the use of our services.
+                      <strong>Liability:</strong> Sun Point Appliances is not liable for indirect or incidental damages arising from the use of our services.
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -244,7 +244,7 @@ const Privacy = () => {
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-green-600" />
                     <div>
-                      <strong>Sunpoint Appliances (AKBARALLYS)</strong>
+                      <strong>Sun Point Appliances (AKBARALLYS)</strong>
                       <p className="text-sm text-gray-600">
                         15 Sakar VII, Nehru Bridge Corner, Ashram Rd, opposite Patang Hotel, Ahmedabad, Gujarat 380009
                       </p>
