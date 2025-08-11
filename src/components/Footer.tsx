@@ -53,12 +53,17 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <a 
+                    href="https://maps.google.com/?q=Sun+Point+Appliances,+15+Sakar+VII+Nehru+Bridge+Corner,+Ashram+Rd,+opposite+Patang+Hotel,+Ahmedabad,+Gujarat+380009"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-primary transition-colors duration-200 text-sm leading-relaxed"
+                  >
                     Sun Point Appliances (AKBARALLYS)<br />
                     15 Sakar VII Nehru Bridge Corner,<br />
                     Ashram Rd, opposite Patang Hotel,<br />
                     Ahmedabad, Gujarat 380009
-                  </p>
+                  </a>
                 </div>
               </div>
               
@@ -151,7 +156,13 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <span className="text-gray-300 text-sm">Follow us:</span>
               <div className="flex gap-3">
-                <a href="#" className="bg-gray-700 hover:bg-primary p-2 rounded-full transition-colors duration-200" title="Facebook">
+                <a 
+                  href="https://www.facebook.com/people/Sun-Point-Appliances-Akbarallys/61578375280774/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 hover:bg-primary p-2 rounded-full transition-colors duration-200" 
+                  title="Facebook"
+                >
                   <Facebook className="h-4 w-4" />
                 </a>
                 <a href="#" className="bg-gray-700 hover:bg-primary p-2 rounded-full transition-colors duration-200" title="Instagram">
@@ -164,8 +175,6 @@ const Footer = () => {
             <div className="text-center">
               <div className="flex items-center gap-4 text-xs text-gray-400">
                 <span>🏠 Your Trusted Home Appliance Partner</span>
-                <span>•</span>
-                <span>📞 24/7 Customer Support</span>
                 <span>•</span>
                 <span>🚚 Free Delivery in Ahmedabad</span>
               </div>
