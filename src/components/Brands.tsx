@@ -76,9 +76,7 @@ const BrandScroller: React.FC<{ brands: { name: string; logo: string }[] }> = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const animationRef = useRef<number | null>(null);
   const isUserInteracting = useRef(false);
-  const scrollSpeed = 0.8; // pixels per frame
-
-  const LOOP_WIDTH = brands.length * 80; // Adjust based on brand card width
+  const scrollSpeed = 1; // pixels per frame
 
   // Auto-scroll loop
   const startAutoScroll = () => {
@@ -94,9 +92,14 @@ const BrandScroller: React.FC<{ brands: { name: string; logo: string }[] }> = ({
 
       const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
 
-      // Loop when at end
-      if (scrollLeft >= scrollWidth - clientWidth - 1) {
-        containerRef.current.scrollLeft = scrollLeft - LOOP_WIDTH;
+      // Reset to beginning when reaching the end
+      if (scrollLeft >= scrollWidth - clientWidth) {
+        // Use requestAnimationFrame to ensure smooth reset
+        requestAnimationFrame(() => {
+          if (containerRef.current) {
+            containerRef.current.scrollLeft = 0;
+          }
+        });
       }
 
       animationRef.current = requestAnimationFrame(scroll);
@@ -109,8 +112,8 @@ const BrandScroller: React.FC<{ brands: { name: string; logo: string }[] }> = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const startOffset = container.scrollWidth / 3;
-    container.scrollLeft = startOffset;
+    // Start from the beginning
+    container.scrollLeft = 0;
 
     startAutoScroll();
 
