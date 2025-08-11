@@ -176,9 +176,9 @@ const Footer = () => {
               <p className="text-gray-300 text-sm">
                 © 2024 SunPoint Appliances (AKBARALLYS). All rights reserved.
               </p>
-              <p className="text-gray-400 text-xs mt-1">
+              {/* <p className="text-gray-400 text-xs mt-1">
                 GST No: 24ABCDE1234F1Z5 | PAN: ABCDE1234F
-              </p>
+              </p> */}
               <div className="mt-2">
                 <a 
                   href="/privacy" 

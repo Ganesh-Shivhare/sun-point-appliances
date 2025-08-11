@@ -2,6 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 
 const Hero = () => {
+  const handleCallClick = () => {
+    // Open phone dialer with the business phone number
+    window.open('tel:+919876543210', '_self');
+  };
+
+  const handleWhatsAppClick = () => {
+    // Open WhatsApp with a predefined message
+    const message = encodeURIComponent("Hi! I'm interested in your appliances. Can you help me?");
+    const phoneNumber = "919876543210"; // Replace with actual business WhatsApp number
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-background py-24 px-4">
       {/* Background decoration */}
@@ -34,11 +46,20 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center fade-in">
-              <Button size="lg" className="text-lg px-10 py-4 shadow-glow hover-lift">
+              <Button 
+                size="lg" 
+                className="text-lg px-10 py-4 shadow-glow hover-lift"
+                onClick={handleCallClick}
+              >
                 <Phone className="mr-3 h-6 w-6" />
                 Call Us Now
               </Button>
-              <Button variant="outline" size="lg" className="text-lg px-10 py-4 hover-lift border-2">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-10 py-4 hover-lift border-2"
+                onClick={handleWhatsAppClick}
+              >
                 <MessageCircle className="mr-3 h-6 w-6" />
                 WhatsApp Chat
               </Button>

@@ -13,6 +13,11 @@ const Navigation = () => {
     }
   };
 
+  const handleCallClick = () => {
+    // Open phone dialer with the business phone number
+    window.open('tel:+919876543210', '_self');
+  };
+
   const navItems = [
     { label: "About Us", id: "about" },
     { label: "Our Product", id: "products" },
@@ -50,7 +55,7 @@ const Navigation = () => {
 
           {/* Contact Button */}
           <div className="hidden md:block">
-            <Button size="sm">
+            <Button size="sm" onClick={handleCallClick}>
               <Phone className="h-4 w-4 mr-2" />
               Call Now
             </Button>
