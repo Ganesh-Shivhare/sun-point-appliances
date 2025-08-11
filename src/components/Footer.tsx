@@ -165,7 +165,13 @@ const Footer = () => {
                 >
                   <Facebook className="h-4 w-4" />
                 </a>
-                <a href="#" className="bg-gray-700 hover:bg-primary p-2 rounded-full transition-colors duration-200" title="Instagram">
+                <a 
+                  href="https://www.instagram.com/sun.point.appliances?igsh=bGp5bWpuMmxjeXl3" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 hover:bg-primary p-2 rounded-full transition-colors duration-200" 
+                  title="Instagram"
+                >
                   <Instagram className="h-4 w-4" />
                 </a>
               </div>
