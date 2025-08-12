@@ -189,7 +189,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-center md:text-right">
               <p className="text-gray-300 text-sm">
-                © 2024 Sun Point Appliances (AKBARALLYS). All rights reserved.
+                © Sun Point Appliances. All rights reserved.
               </p>
               {/* <p className="text-gray-400 text-xs mt-1">
                 GST No: 24ABCDE1234F1Z5 | PAN: ABCDE1234F
