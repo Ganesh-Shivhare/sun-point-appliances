@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
+import UserInfoDialog from "./components/UserInfoDialog";
 
 const queryClient = new QueryClient();
 
@@ -15,6 +16,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <UserInfoDialog />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/privacy" element={<Privacy />} />
