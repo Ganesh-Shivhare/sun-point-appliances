@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { cn } from "@/lib/utils";
+import { sendUserInfoEmail } from "@/lib/emailService";
 
 // Custom DialogContent without close button
 const DialogContent = React.forwardRef<
@@ -97,20 +98,23 @@ const UserInfoDialog = () => {
     setIsLoading(true);
 
     try {
-      // Here you can add API call to save user info
-      // For now, we'll just simulate a delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      toast({
-        title: "Thank You!",
-        description: "Your information has been submitted successfully.",
-      });
-
-      // Close dialog after successful submission
-      setIsOpen(false);
+      // Send email with user information
+      const emailSent = await sendUserInfoEmail(userInfo);
       
-      // Store in localStorage to remember user
-      localStorage.setItem('userInfo', JSON.stringify(userInfo));
+      if (emailSent) {
+        toast({
+          title: "Thank You!",
+          description: "Your inquiry has been submitted successfully. We'll contact you soon!",
+        });
+
+        // Close dialog after successful submission
+        setIsOpen(false);
+        
+        // Store in localStorage to remember user
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+      } else {
+        throw new Error('Failed to send email');
+      }
       
     } catch (error) {
       toast({
@@ -134,7 +138,7 @@ const UserInfoDialog = () => {
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-bold text-primary">
-            Welcome to Sun Point Appliances
+            Get in Touch with Sun Point Appliances
           </DialogTitle>
         </DialogHeader>
         
