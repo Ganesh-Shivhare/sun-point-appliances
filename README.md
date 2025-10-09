@@ -64,6 +64,44 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/266095a4-a106-4dbb-9b90-c5ee7bec5f92) and click on Share -> Publish.
 
+## Environment Variables for Production
+
+For production deployment, you need to set the following environment variables:
+
+### Frontend Environment Variables (VITE_*)
+- `VITE_API_URL`: Your production API server URL (e.g., `http://192.168.29.72:3002` or `https://your-api-domain.com`)
+
+### Backend Environment Variables (for server.js)
+- `VITE_SMTP_SERVER`: Your SMTP server hostname
+- `VITE_SMTP_PORT`: SMTP server port (usually 587)
+- `VITE_SMTP_LOGIN`: Your SMTP username/email
+- `VITE_SMTP_PASSWORD`: Your SMTP password
+- `VITE_FROM_EMAIL`: Email address to send from
+- `VITE_TO_EMAIL`: Email address to receive inquiries
+
+### Example .env file:
+```
+VITE_API_URL=http://192.168.29.72:3002
+VITE_SMTP_SERVER=smtp.gmail.com
+VITE_SMTP_PORT=587
+VITE_SMTP_LOGIN=your-email@gmail.com
+VITE_SMTP_PASSWORD=your-app-password
+VITE_FROM_EMAIL=your-email@gmail.com
+VITE_TO_EMAIL=store-owner@domain.com
+```
+
+## Port Configuration
+
+**Important**: The server runs on port 3002 by default. If port 3001 is already in use (by another application), the server will need to be started on a different port:
+
+```bash
+# Start server on port 3002
+PORT=3001 node server.js
+
+# Or start on any other available port
+PORT=3003 node server.js
+```
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes, you can!

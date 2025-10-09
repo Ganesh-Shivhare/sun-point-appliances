@@ -7,7 +7,9 @@ interface EmailData {
 // Send email function using API endpoint
 export const sendUserInfoEmail = async (userData: EmailData): Promise<boolean> => {
   try {
-    const response = await fetch('http://localhost:3001/api/send-email', {
+    // Use environment variable for API URL, fallback to localhost for development
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    const response = await fetch(`${apiUrl}/api/send-email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
