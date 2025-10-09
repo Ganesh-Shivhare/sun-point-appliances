@@ -14,14 +14,21 @@ app.use(express.json());
 
 // Create transporter
 const createTransporter = () => {
+  const port = parseInt(process.env.VITE_SMTP_PORT);
+  const isSecure = port === 465; // Port 465 is for SSL, 587 is for TLS
+  
   return createTransport({
     host: process.env.VITE_SMTP_SERVER,
-    port: parseInt(process.env.VITE_SMTP_PORT),
-    secure: false,
+    port: port,
+    secure: isSecure, // true for 465, false for other ports
     auth: {
       user: process.env.VITE_SMTP_LOGIN,
       pass: process.env.VITE_SMTP_PASSWORD,
     },
+    tls: {
+      // Do not fail on invalid certs
+      rejectUnauthorized: false
+    }
   });
 };
 
@@ -38,6 +45,18 @@ app.post('/api/send-email', async (req, res) => {
       });
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Invalid email format' 
+      });
+    }
+
+    // Phone validation removed - accept any phone format
+
+    console.log('Attempting to send email for:', { name, phone, email });
     const transporter = createTransporter();
 
     // Email to Store Owner (you)
