@@ -8,8 +8,12 @@ interface EmailData {
 export const sendUserInfoEmail = async (userData: EmailData): Promise<boolean> => {
   try {
     // Use environment variable for API URL, fallback to localhost for development
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
-    const response = await fetch(`${apiUrl}/api/send-email`, {
+    // Prefer explicit VITE_API_URL if provided; otherwise use current origin in browser.
+    const apiBase: string =
+      (import.meta as any)?.env?.VITE_API_URL ||
+      (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3001');
+
+    const response = await fetch(`${apiBase}/api/send-email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

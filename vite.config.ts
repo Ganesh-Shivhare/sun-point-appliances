@@ -9,6 +9,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     strictPort: true,
+    allowedHosts: [
+      'sunpointappliances.in',
+      'www.sunpointappliances.in',
+    ],
   },
   plugins: [
     react(),
