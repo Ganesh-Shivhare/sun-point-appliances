@@ -10,7 +10,7 @@ const Hero = () => {
   const handleWhatsAppClick = () => {
     // Open WhatsApp with a predefined message
     const message = encodeURIComponent("Hi! I'm interested in your appliances. Can you help me?");
-    const phoneNumber = "919876543210"; // Replace with actual business WhatsApp number
+    const phoneNumber = "919825652221"; // Business WhatsApp number
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 

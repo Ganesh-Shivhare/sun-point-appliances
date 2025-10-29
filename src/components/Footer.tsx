@@ -90,7 +90,7 @@ const Footer = () => {
               <div className="flex items-center gap-3">
                 <MessageCircle className="h-5 w-5 text-primary flex-shrink-0" />
                 <div>
-                  <a href="https://wa.me/917926580157" className="text-gray-300 hover:text-primary transition-colors duration-200">
+                  <a href="https://wa.me/919825652221" className="text-gray-300 hover:text-primary transition-colors duration-200">
                     WhatsApp Chat
                   </a>
                   <p className="text-xs text-gray-400">Chat with us for queries and offers</p>
