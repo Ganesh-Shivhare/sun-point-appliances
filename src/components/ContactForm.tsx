@@ -145,9 +145,13 @@ const ContactForm = ({ variant = "page", onCancel, onSubmit, isLoading = false }
               placeholder="Your question"
               value={formData.question}
               onChange={handleInputChange}
+              required
               rows={4}
               className="border border-border rounded px-3 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-muted-foreground resize-none"
             />
+            <span className="absolute -top-2 right-2 bg-background px-1 text-primary text-sm">
+              *
+            </span>
           </div>
 
           {/* Checkbox */}
