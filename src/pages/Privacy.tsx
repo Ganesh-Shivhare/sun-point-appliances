@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Shield, Users, FileText, Eye, Trash2 } from "lucide-react";
 
@@ -122,30 +121,10 @@ const Privacy = () => {
               </CardContent>
             </Card>
 
-            {/* Customer Consent Form */}
-            <Card className="border-2 border-blue-200 bg-blue-50">
-              <CardHeader>
-                <CardTitle className="text-2xl text-blue-900">4. Customer Consent for RCS & Marketing Updates</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start gap-3 p-4 bg-white rounded-lg border">
-                  <Checkbox id="marketing-consent" className="mt-1" />
-                  <div>
-                    <label htmlFor="marketing-consent" className="text-sm font-medium text-gray-900 cursor-pointer">
-                      Yes, I would like to receive marketing updates and offers from Sun Point Appliances via Email, SMS, and RCS.
-                    </label>
-                    <p className="text-sm text-gray-600 mt-1">
-                      By checking this box, you agree to our Privacy Policy and Terms of Service. You can opt out at any time by following the instructions in our messages or by contacting us directly.
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
             {/* Data Protection & Security */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">5. Data Protection & Security</CardTitle>
+                <CardTitle className="text-2xl">4. Data Protection & Security</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
@@ -157,7 +136,7 @@ const Privacy = () => {
             {/* Sharing of Information */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">6. Sharing of Information</CardTitle>
+                <CardTitle className="text-2xl">5. Sharing of Information</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
@@ -169,7 +148,7 @@ const Privacy = () => {
             {/* Your Rights */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">7. Your Rights</CardTitle>
+                <CardTitle className="text-2xl">6. Your Rights</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4">You have the right to:</p>
@@ -202,7 +181,7 @@ const Privacy = () => {
             {/* Terms of Service */}
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">8. Terms of Service</CardTitle>
+                <CardTitle className="text-2xl">7. Terms of Service</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="space-y-3">
@@ -237,7 +216,7 @@ const Privacy = () => {
             {/* Contact Information */}
             <Card className="border-2 border-green-200 bg-green-50">
               <CardHeader>
-                <CardTitle className="text-2xl text-green-900">9. Contact Us</CardTitle>
+                <CardTitle className="text-2xl text-green-900">8. Contact Us</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
