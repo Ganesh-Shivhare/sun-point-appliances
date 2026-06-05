@@ -173,15 +173,16 @@ const ContactForm = ({ variant = "page", onCancel, onSubmit, isLoading = false }
           {/* Terms Text */}
           <p className="text-sm text-foreground leading-relaxed">
             By submitting this form, I agree to receive marketing updates and
-            promotional offers from Shree SMS and its associates via Email, SMS
+            promotional offers from Sun Point Appliances and its associates via Email, SMS
             (Text Messages), RCS, and WhatsApp. I also confirm that I have read
             and agree to your{" "}
-            <a href="#" className="text-blue-600">
-              Terms of Use
-            </a>{" "}
-            and{" "}
-            <a href="#" className="text-blue-600">
-              Privacy Policy
+            <a
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline cursor-pointer"
+            >
+              Privacy Policy & Terms
             </a>
             .
           </p>
