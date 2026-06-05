@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Dialog, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
@@ -28,14 +29,18 @@ const DialogContent = React.forwardRef<
 DialogContent.displayName = DialogPrimitive.Content.displayName;
 
 const UserInfoDialog = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
-    // Show dialog when component mounts (app launches)
+    if (location.pathname === "/privacy") {
+      setIsOpen(false);
+      return;
+    }
     setIsOpen(true);
-  }, []);
+  }, [location.pathname]);
 
   const handleSubmit = async (formData: {
     firstName: string;
