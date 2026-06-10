@@ -113,8 +113,8 @@ const Privacy = () => {
                 </div>
                 <p className="text-gray-700 text-sm">
                   If you do not wish to receive such updates, you may opt out at any time by contacting us at{' '}
-                  <a href="mailto:info@sunpointappliances.in" className="text-blue-600 hover:underline">
-                    info@sunpointappliances.in
+                  <a href="mailto:adnan@sunpointappliances.in" className="text-blue-600 hover:underline">
+                    adnan@sunpointappliances.in
                   </a>{' '}
                   or using the opt-out method mentioned in our messages (e.g., replying "STOP" to RCS).
                 </p>
@@ -237,8 +237,8 @@ const Privacy = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-5 w-5 text-green-600" />
-                    <a href="mailto:info@sunpointappliances.in" className="text-green-600 hover:underline">
-                      info@sunpointappliances.in
+                    <a href="mailto:adnan@sunpointappliances.in" className="text-green-600 hover:underline">
+                      adnan@sunpointappliances.in
                     </a>
                   </div>
                 </div>
